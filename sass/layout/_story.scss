@@ -1,0 +1,15 @@
+.story{
+
+ &-content{
+  grid-row: 3/4;
+  grid-column: full-start/col-start 5;
+  background: $color-dark-blue;
+ }
+
+ &-pictures{
+  grid-row: 3/4;
+  grid-column: col-start 5/full-end;
+  background: $color-dark1;
+ }
+
+}
