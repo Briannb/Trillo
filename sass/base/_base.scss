@@ -8,3 +8,78 @@
 html{
  box-sizing: border-box;
 }
+
+.loader{
+ width: 10rem;
+ height:9rem;
+ opacity: 1;
+ position: fixed;
+ border-radius: 50%;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%,-50%) scale(20);
+ color: $color-white;
+ background: $color-orange;
+ z-index: 999999;
+ display: flex;
+ justify-content: center;
+ align-content: center;
+ align-items: center;
+
+ &-text{
+  font-size: 50%;
+  text-transform: uppercase;
+ }
+}
+
+.loader-disabled{
+ animation: 1.5s loadOff  ease-in-out;
+ animation-fill-mode: both;
+}
+
+@keyframes loadOff{
+ 0%{
+  opacity: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%) scale(20);
+ }
+ 33%{
+  transform: translate(-50%,-50%) scale(1);
+  opacity: 1;
+ }
+ 66%{
+  transform: translate(-50%,-50%) scale(1);
+  top: 40%;
+  opacity: .7;
+ }
+ 76%{
+  transform: translate(-50%,-50%) scale(1);
+  top: 60%;
+  opacity: .4;
+ }
+ 86%{
+  transform: translate(-50%,-50%) scale(1);
+  top: 40%;
+  opacity: .2;
+ }
+ 93%{
+  transform: translate(-50%,-50%) scale(1);
+  top: -100%;
+ }
+ 96%{
+  transform: translate(-150%,-150%) scale(0);
+  top: -500%;
+  opacity: 0;
+  visibility: hidden;
+  z-index: -20;
+ }
+ 100%{
+  transform: translate(-150%,-150%) scale(0);
+  top: -500%;
+  opacity: 0;
+  visibility: hidden;
+  display: none;
+  z-index: -20;
+ }
+}

@@ -13,18 +13,38 @@ p{
  font-size: .9rem;
  color: $color-dark-gray;
 }
+.text-white{
+ color: $color-white;
+}
 .h1{
- font-size: 1.5rem;
+ font-size: 3rem;
+ text-transform: uppercase;
+ &-special{
+  font-weight: 200;
+  font-style: italic;
+  font-size: 2.2rem;
+  color: $color-orange;
+ }
 }
 .h2{
  font-size: 1.3rem;
+
+ &-special{
+  font-weight: 200;
+  font-style: italic;
+  font-size: 2.2rem;
+  color: $color-orange;
+ }
 }
 .h3{
  font-size: 1.1rem;
 }
 
+a,a:link,a:visited{
+ color:$color-white;
+ text-decoration: none;
+}
+
 .h4{
-
  font-size: 1rem;
-
 }

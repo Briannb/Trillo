@@ -1,6 +1,22 @@
 .sidebar{
- background: $color-dark1;
+ background: $color-orange-light;
  grid-row: 1/-1;
  grid-column: sidebar-start/sidebar-end;
  z-index: 9;
+ display: flex;
+ justify-content: center;
+
+
+ & i{
+  font-size: 1.9rem;
+  color: $color-white;
+  position: fixed;
+  margin-top: 1rem;
+  cursor: pointer;
+  transition: .3s all;
+
+  &:hover{
+   color: $color-dark1;
+  }
+ }
 }
