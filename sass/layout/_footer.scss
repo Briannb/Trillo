@@ -1,0 +1,35 @@
+.footer{
+ grid-column: full-start/full-end;
+ min-height: 10rem;
+ background: $color-dark-blue;
+ text-align: center;
+ display: flex;
+ justify-content: center;
+ padding: 3rem 5rem;
+ flex-wrap: wrap;
+
+ @include responsive(tab-land){
+  grid-column: sidebar-start/full-end;
+  
+}
+ &-links{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  & .btn-simple{
+   
+   font-size: .5rem;
+   @include responsive(tab-land){
+    
+    
+  }
+  }
+ }
+ &-copyright{
+  margin-top: 5rem;
+  color:$color-light-gray;
+  width: 100%;
+  font-size: .9rem;
+ }
+}

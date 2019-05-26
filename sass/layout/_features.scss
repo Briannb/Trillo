@@ -1,13 +1,21 @@
 .features{
  grid-column: center-start /center-end;
- grid-row: 2/3;
+ grid-row: 3/4;
  min-height: 30rem;
  padding: 10rem 3rem;
  display: grid;
  grid-gap: 5rem;
-grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
- align-items: start;
+	grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+	align-items: start;
+
+	@include responsive(tab-land){
+		
+		grid-column: sidebar-start/-1;
+	
+		grid-row: 3 / 4;
+	}
 }
+
 
 .feature{
 display: grid;

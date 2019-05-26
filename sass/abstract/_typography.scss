@@ -1,8 +1,16 @@
+html{
+ font-size: 90.7%;
+}
+
 body{
  font-family: 'Raleway', sans-serif;
- font-size: 75.7%;
+ font-size: 1.5rem;
  line-height: 1.5;
  font-weight: 200;
+
+ @include responsive(mobile){
+  font-size: 55.7%;
+ }
 }
 h1,h2,h3,h4,h5,h6{
  font-family: 'Nunito Sans', sans-serif;
@@ -19,10 +27,13 @@ p{
 .h1{
  font-size: 3rem;
  text-transform: uppercase;
+ @include responsive(mobile){
+  font-size: 1.5rem;
+ }
  &-special{
   font-weight: 200;
   font-style: italic;
-  font-size: 2.2rem;
+  font-size: 6rem;
   color: $color-orange;
  }
 }
@@ -33,6 +44,9 @@ p{
   font-weight: 200;
   font-style: italic;
   font-size: 2.2rem;
+  @include responsive(mobile){
+   font-size: 1.8rem;
+  }
   color: $color-orange;
  }
 }
@@ -43,6 +57,7 @@ p{
 a,a:link,a:visited{
  color:$color-white;
  text-decoration: none;
+ font-size: 1.1rem;
 }
 
 .h4{

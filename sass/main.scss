@@ -1,10 +1,12 @@
-
+@import "./abstract/mixings";
 @import "./abstract/variables";
 @import "./abstract/typography";
 @import "./abstract/utilities";
 
 @import "./components/btn";
 
+@import "./layout/footer";
+@import "./layout/gallery";
 @import "./layout/homes";
 @import "./layout/features";
 @import "./layout/sidebar";

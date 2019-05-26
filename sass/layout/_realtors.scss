@@ -1,14 +1,18 @@
 .realtors{
  grid-column: col-start 6 /full-end;
- grid-row: 1/2;
+ grid-row: 1/3;
  background: $color-white;
 
  display: flex;
  justify-content: center;
  align-items: center;
 
+ @include responsive(tab-land){
+  display: none;
+ }
+ 
  .realtors-container{
-  width: 70%;
+  width: 80%;
   display: flex;
   flex-direction: column;
 
@@ -23,7 +27,7 @@
 
  .realtor{
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: 10rem 1fr 1fr 1fr;
   margin: 1rem 0;
   align-items: left;
 
@@ -37,6 +41,7 @@
    font-size: 1.4rem;
    margin-left: 1.5rem;
    align-self: center;
+   margin-top: -2rem;
    
   }
   &__paragraph{

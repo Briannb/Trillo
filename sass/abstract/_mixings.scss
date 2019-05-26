@@ -1,0 +1,22 @@
+@mixin responsive($device) {
+ @if $device == mobile {
+  @media screen and(max-width: 600px){
+    @content
+  }
+ }
+ @if $device == tab-port {
+  @media screen and(max-width: 900px){
+    @content
+  }
+ }
+ @if $device == tab-land {
+  @media screen and(max-width: 1200px){
+    @content
+  }
+ }
+ @if $device == big-screen {
+  @media screen and(min-width: 2800px){
+    @content
+  }
+ }
+}

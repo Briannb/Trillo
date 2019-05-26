@@ -1,13 +1,22 @@
 .homes{
  margin-top: 5rem;
 
- grid-row: 4/5;
+ grid-row: 5/6;
  grid-column: col-start/center-end;
-
+ padding: 5rem;
  display: grid;
  grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
  grid-gap: 3rem;
  grid-template-rows: auto;
+
+ @include responsive(tab-land){
+  grid-column: sidebar-start/full-end;
+  padding: 1rem;
+}
+@include responsive(tab-port){
+ grid-column: sidebar-start/full-end;
+ grid-row: 6/7;
+}
 
 }
 
@@ -33,7 +42,7 @@
  }
  &__title{
   grid-column: 2/4;
-  background: $color-orange;
+  background: $color-dark-blue;
   color: $color-white;
   text-align: center;
   font-size: 1.5rem;
@@ -64,12 +73,12 @@
   grid-column: 1/span 5;
   text-align: center;
   padding: 1.2rem 0;
-  background:rgba($color-bluelight,0.8);
+  background:rgba($color-orange,0.8);
   font-weight: 700;
   font-size: .9rem;
   transition: .3s all;
   &:hover{
-   background:rgba($color-bluelight,1);
+   background:rgba($color-orange,1);
   }
  }
 }
